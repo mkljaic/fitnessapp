@@ -1,0 +1,17 @@
+.dart_tool/
+.idea/
+.vscode/
+build/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+.pub-cache/
+.pub/
+ios/Pods/
+android/.gradle/
+.env
+backend/node_modules/
+backend/supabase/.temp/
+backend/supabase/.branches/
+backend/.env
+backend/.env.*
