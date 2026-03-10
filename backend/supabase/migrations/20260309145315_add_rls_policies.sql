@@ -43,243 +43,243 @@ ALTER TABLE public.ai_requests ENABLE ROW LEVEL SECURITY;
 CREATE POLICY "user_profiles_select_own"
 ON public.user_profiles
 FOR SELECT
-USING (user_id = auth.uid());
+USING (user_id = (select auth.uid()));
 
 CREATE POLICY "user_profiles_insert_own"
 ON public.user_profiles
 FOR INSERT
-WITH CHECK (user_id = auth.uid());
+WITH CHECK (user_id = (select auth.uid()));
 
 CREATE POLICY "user_profiles_update_own"
 ON public.user_profiles
 FOR UPDATE
-USING (user_id = auth.uid())
-WITH CHECK (user_id = auth.uid());
+USING (user_id = (select auth.uid()))
+WITH CHECK (user_id = (select auth.uid()));
 
 CREATE POLICY "user_profiles_delete_own"
 ON public.user_profiles
 FOR DELETE
-USING (user_id = auth.uid());
+USING (user_id = (select auth.uid()));
 
 -- user_metrics
 CREATE POLICY "user_metrics_select_own"
 ON public.user_metrics
 FOR SELECT
-USING (user_id = auth.uid());
+USING (user_id = (select auth.uid()));
 
 CREATE POLICY "user_metrics_insert_own"
 ON public.user_metrics
 FOR INSERT
-WITH CHECK (user_id = auth.uid());
+WITH CHECK (user_id = (select auth.uid()));
 
 CREATE POLICY "user_metrics_update_own"
 ON public.user_metrics
 FOR UPDATE
-USING (user_id = auth.uid())
-WITH CHECK (user_id = auth.uid());
+USING (user_id = (select auth.uid()))
+WITH CHECK (user_id = (select auth.uid()));
 
 CREATE POLICY "user_metrics_delete_own"
 ON public.user_metrics
 FOR DELETE
-USING (user_id = auth.uid());
+USING (user_id = (select auth.uid()));
 
 -- meals
 CREATE POLICY "meals_select_own"
 ON public.meals
 FOR SELECT
-USING (user_id = auth.uid());
+USING (user_id = (select auth.uid()));
 
 CREATE POLICY "meals_insert_own"
 ON public.meals
 FOR INSERT
-WITH CHECK (user_id = auth.uid());
+WITH CHECK (user_id = (select auth.uid()));
 
 CREATE POLICY "meals_update_own"
 ON public.meals
 FOR UPDATE
-USING (user_id = auth.uid())
-WITH CHECK (user_id = auth.uid());
+USING (user_id = (select auth.uid()))
+WITH CHECK (user_id = (select auth.uid()));
 
 CREATE POLICY "meals_delete_own"
 ON public.meals
 FOR DELETE
-USING (user_id = auth.uid());
+USING (user_id = (select auth.uid()));
 
 -- food_logs
 CREATE POLICY "food_logs_select_own"
 ON public.food_logs
 FOR SELECT
-USING (user_id = auth.uid());
+USING (user_id = (select auth.uid()));
 
 CREATE POLICY "food_logs_insert_own"
 ON public.food_logs
 FOR INSERT
-WITH CHECK (user_id = auth.uid());
+WITH CHECK (user_id = (select auth.uid()));
 
 CREATE POLICY "food_logs_update_own"
 ON public.food_logs
 FOR UPDATE
-USING (user_id = auth.uid())
-WITH CHECK (user_id = auth.uid());
+USING (user_id = (select auth.uid()))
+WITH CHECK (user_id = (select auth.uid()));
 
 CREATE POLICY "food_logs_delete_own"
 ON public.food_logs
 FOR DELETE
-USING (user_id = auth.uid());
+USING (user_id = (select auth.uid()));
 
 -- workout_routines
 CREATE POLICY "workout_routines_select_own"
 ON public.workout_routines
 FOR SELECT
-USING (user_id = auth.uid());
+USING (user_id = (select auth.uid()));
 
 CREATE POLICY "workout_routines_insert_own"
 ON public.workout_routines
 FOR INSERT
-WITH CHECK (user_id = auth.uid());
+WITH CHECK (user_id = (select auth.uid()));
 
 CREATE POLICY "workout_routines_update_own"
 ON public.workout_routines
 FOR UPDATE
-USING (user_id = auth.uid())
-WITH CHECK (user_id = auth.uid());
+USING (user_id = (select auth.uid()))
+WITH CHECK (user_id = (select auth.uid()));
 
 CREATE POLICY "workout_routines_delete_own"
 ON public.workout_routines
 FOR DELETE
-USING (user_id = auth.uid());
+USING (user_id = (select auth.uid()));
 
 -- workout_sessions
 CREATE POLICY "workout_sessions_select_own"
 ON public.workout_sessions
 FOR SELECT
-USING (user_id = auth.uid());
+USING (user_id = (select auth.uid()));
 
 CREATE POLICY "workout_sessions_insert_own"
 ON public.workout_sessions
 FOR INSERT
-WITH CHECK (user_id = auth.uid());
+WITH CHECK (user_id = (select auth.uid()));
 
 CREATE POLICY "workout_sessions_update_own"
 ON public.workout_sessions
 FOR UPDATE
-USING (user_id = auth.uid())
-WITH CHECK (user_id = auth.uid());
+USING (user_id = (select auth.uid()))
+WITH CHECK (user_id = (select auth.uid()));
 
 CREATE POLICY "workout_sessions_delete_own"
 ON public.workout_sessions
 FOR DELETE
-USING (user_id = auth.uid());
+USING (user_id = (select auth.uid()));
 
 -- meal_plans
 CREATE POLICY "meal_plans_select_own"
 ON public.meal_plans
 FOR SELECT
-USING (user_id = auth.uid());
+USING (user_id = (select auth.uid()));
 
 CREATE POLICY "meal_plans_insert_own"
 ON public.meal_plans
 FOR INSERT
-WITH CHECK (user_id = auth.uid());
+WITH CHECK (user_id = (select auth.uid()));
 
 CREATE POLICY "meal_plans_update_own"
 ON public.meal_plans
 FOR UPDATE
-USING (user_id = auth.uid())
-WITH CHECK (user_id = auth.uid());
+USING (user_id = (select auth.uid()))
+WITH CHECK (user_id = (select auth.uid()));
 
 CREATE POLICY "meal_plans_delete_own"
 ON public.meal_plans
 FOR DELETE
-USING (user_id = auth.uid());
+USING (user_id = (select auth.uid()));
 
 -- workout_plans
 CREATE POLICY "workout_plans_select_own"
 ON public.workout_plans
 FOR SELECT
-USING (user_id = auth.uid());
+USING (user_id = (select auth.uid()));
 
 CREATE POLICY "workout_plans_insert_own"
 ON public.workout_plans
 FOR INSERT
-WITH CHECK (user_id = auth.uid());
+WITH CHECK (user_id = (select auth.uid()));
 
 CREATE POLICY "workout_plans_update_own"
 ON public.workout_plans
 FOR UPDATE
-USING (user_id = auth.uid())
-WITH CHECK (user_id = auth.uid());
+USING (user_id = (select auth.uid()))
+WITH CHECK (user_id = (select auth.uid()));
 
 CREATE POLICY "workout_plans_delete_own"
 ON public.workout_plans
 FOR DELETE
-USING (user_id = auth.uid());
+USING (user_id = (select auth.uid()));
 
 -- user_streaks
 CREATE POLICY "user_streaks_select_own"
 ON public.user_streaks
 FOR SELECT
-USING (user_id = auth.uid());
+USING (user_id = (select auth.uid()));
 
 CREATE POLICY "user_streaks_insert_own"
 ON public.user_streaks
 FOR INSERT
-WITH CHECK (user_id = auth.uid());
+WITH CHECK (user_id = (select auth.uid()));
 
 CREATE POLICY "user_streaks_update_own"
 ON public.user_streaks
 FOR UPDATE
-USING (user_id = auth.uid())
-WITH CHECK (user_id = auth.uid());
+USING (user_id = (select auth.uid()))
+WITH CHECK (user_id = (select auth.uid()));
 
 CREATE POLICY "user_streaks_delete_own"
 ON public.user_streaks
 FOR DELETE
-USING (user_id = auth.uid());
+USING (user_id = (select auth.uid()));
 
 -- subscriptions
 CREATE POLICY "subscriptions_select_own"
 ON public.subscriptions
 FOR SELECT
-USING (user_id = auth.uid());
+USING (user_id = (select auth.uid()));
 
 CREATE POLICY "subscriptions_insert_own"
 ON public.subscriptions
 FOR INSERT
-WITH CHECK (user_id = auth.uid());
+WITH CHECK (user_id = (select auth.uid()));
 
 CREATE POLICY "subscriptions_update_own"
 ON public.subscriptions
 FOR UPDATE
-USING (user_id = auth.uid())
-WITH CHECK (user_id = auth.uid());
+USING (user_id = (select auth.uid()))
+WITH CHECK (user_id = (select auth.uid()));
 
 CREATE POLICY "subscriptions_delete_own"
 ON public.subscriptions
 FOR DELETE
-USING (user_id = auth.uid());
+USING (user_id = (select auth.uid()));
 
 -- ai_requests
 CREATE POLICY "ai_requests_select_own"
 ON public.ai_requests
 FOR SELECT
-USING (user_id = auth.uid());
+USING (user_id = (select auth.uid()));
 
 CREATE POLICY "ai_requests_insert_own"
 ON public.ai_requests
 FOR INSERT
-WITH CHECK (user_id = auth.uid());
+WITH CHECK (user_id = (select auth.uid()));
 
 CREATE POLICY "ai_requests_update_own"
 ON public.ai_requests
 FOR UPDATE
-USING (user_id = auth.uid())
-WITH CHECK (user_id = auth.uid());
+USING (user_id = (select auth.uid()))
+WITH CHECK (user_id = (select auth.uid()));
 
 CREATE POLICY "ai_requests_delete_own"
 ON public.ai_requests
 FOR DELETE
-USING (user_id = auth.uid());
+USING (user_id = (select auth.uid()));
 
 -- ---------------------------------------------------------
 -- 3. CHILD TABLICE: pristup samo ako je parent korisnikov
@@ -294,7 +294,7 @@ USING (
     SELECT 1
     FROM public.meals m
     WHERE m.id = meal_items.meal_id
-      AND m.user_id = auth.uid()
+      AND m.user_id = (select auth.uid())
   )
 );
 
@@ -306,7 +306,7 @@ WITH CHECK (
     SELECT 1
     FROM public.meals m
     WHERE m.id = meal_items.meal_id
-      AND m.user_id = auth.uid()
+      AND m.user_id = (select auth.uid())
   )
 );
 
@@ -318,7 +318,7 @@ USING (
     SELECT 1
     FROM public.meals m
     WHERE m.id = meal_items.meal_id
-      AND m.user_id = auth.uid()
+      AND m.user_id = (select auth.uid())
   )
 )
 WITH CHECK (
@@ -326,7 +326,7 @@ WITH CHECK (
     SELECT 1
     FROM public.meals m
     WHERE m.id = meal_items.meal_id
-      AND m.user_id = auth.uid()
+      AND m.user_id = (select auth.uid())
   )
 );
 
@@ -338,7 +338,7 @@ USING (
     SELECT 1
     FROM public.meals m
     WHERE m.id = meal_items.meal_id
-      AND m.user_id = auth.uid()
+      AND m.user_id = (select auth.uid())
   )
 );
 
@@ -351,7 +351,7 @@ USING (
     SELECT 1
     FROM public.food_logs fl
     WHERE fl.id = food_log_items.food_log_id
-      AND fl.user_id = auth.uid()
+      AND fl.user_id = (select auth.uid())
   )
 );
 
@@ -363,7 +363,7 @@ WITH CHECK (
     SELECT 1
     FROM public.food_logs fl
     WHERE fl.id = food_log_items.food_log_id
-      AND fl.user_id = auth.uid()
+      AND fl.user_id = (select auth.uid())
   )
 );
 
@@ -375,7 +375,7 @@ USING (
     SELECT 1
     FROM public.food_logs fl
     WHERE fl.id = food_log_items.food_log_id
-      AND fl.user_id = auth.uid()
+      AND fl.user_id = (select auth.uid())
   )
 )
 WITH CHECK (
@@ -383,7 +383,7 @@ WITH CHECK (
     SELECT 1
     FROM public.food_logs fl
     WHERE fl.id = food_log_items.food_log_id
-      AND fl.user_id = auth.uid()
+      AND fl.user_id = (select auth.uid())
   )
 );
 
@@ -395,7 +395,7 @@ USING (
     SELECT 1
     FROM public.food_logs fl
     WHERE fl.id = food_log_items.food_log_id
-      AND fl.user_id = auth.uid()
+      AND fl.user_id = (select auth.uid())
   )
 );
 
@@ -408,7 +408,7 @@ USING (
     SELECT 1
     FROM public.workout_routines wr
     WHERE wr.id = workout_routine_exercises.routine_id
-      AND wr.user_id = auth.uid()
+      AND wr.user_id = (select auth.uid())
   )
 );
 
@@ -420,7 +420,7 @@ WITH CHECK (
     SELECT 1
     FROM public.workout_routines wr
     WHERE wr.id = workout_routine_exercises.routine_id
-      AND wr.user_id = auth.uid()
+      AND wr.user_id = (select auth.uid())
   )
 );
 
@@ -432,7 +432,7 @@ USING (
     SELECT 1
     FROM public.workout_routines wr
     WHERE wr.id = workout_routine_exercises.routine_id
-      AND wr.user_id = auth.uid()
+      AND wr.user_id = (select auth.uid())
   )
 )
 WITH CHECK (
@@ -440,7 +440,7 @@ WITH CHECK (
     SELECT 1
     FROM public.workout_routines wr
     WHERE wr.id = workout_routine_exercises.routine_id
-      AND wr.user_id = auth.uid()
+      AND wr.user_id = (select auth.uid())
   )
 );
 
@@ -452,7 +452,7 @@ USING (
     SELECT 1
     FROM public.workout_routines wr
     WHERE wr.id = workout_routine_exercises.routine_id
-      AND wr.user_id = auth.uid()
+      AND wr.user_id = (select auth.uid())
   )
 );
 
@@ -465,7 +465,7 @@ USING (
     SELECT 1
     FROM public.workout_sessions ws
     WHERE ws.id = workout_session_exercises.workout_session_id
-      AND ws.user_id = auth.uid()
+      AND ws.user_id = (select auth.uid())
   )
 );
 
@@ -477,7 +477,7 @@ WITH CHECK (
     SELECT 1
     FROM public.workout_sessions ws
     WHERE ws.id = workout_session_exercises.workout_session_id
-      AND ws.user_id = auth.uid()
+      AND ws.user_id = (select auth.uid())
   )
 );
 
@@ -489,7 +489,7 @@ USING (
     SELECT 1
     FROM public.workout_sessions ws
     WHERE ws.id = workout_session_exercises.workout_session_id
-      AND ws.user_id = auth.uid()
+      AND ws.user_id = (select auth.uid())
   )
 )
 WITH CHECK (
@@ -497,7 +497,7 @@ WITH CHECK (
     SELECT 1
     FROM public.workout_sessions ws
     WHERE ws.id = workout_session_exercises.workout_session_id
-      AND ws.user_id = auth.uid()
+      AND ws.user_id = (select auth.uid())
   )
 );
 
@@ -509,7 +509,7 @@ USING (
     SELECT 1
     FROM public.workout_sessions ws
     WHERE ws.id = workout_session_exercises.workout_session_id
-      AND ws.user_id = auth.uid()
+      AND ws.user_id = (select auth.uid())
   )
 );
 
@@ -523,7 +523,7 @@ USING (
     FROM public.workout_session_exercises wse
     JOIN public.workout_sessions ws ON ws.id = wse.workout_session_id
     WHERE wse.id = workout_sets.session_exercise_id
-      AND ws.user_id = auth.uid()
+      AND ws.user_id = (select auth.uid())
   )
 );
 
@@ -536,7 +536,7 @@ WITH CHECK (
     FROM public.workout_session_exercises wse
     JOIN public.workout_sessions ws ON ws.id = wse.workout_session_id
     WHERE wse.id = workout_sets.session_exercise_id
-      AND ws.user_id = auth.uid()
+      AND ws.user_id = (select auth.uid())
   )
 );
 
@@ -549,7 +549,7 @@ USING (
     FROM public.workout_session_exercises wse
     JOIN public.workout_sessions ws ON ws.id = wse.workout_session_id
     WHERE wse.id = workout_sets.session_exercise_id
-      AND ws.user_id = auth.uid()
+      AND ws.user_id = (select auth.uid())
   )
 )
 WITH CHECK (
@@ -558,7 +558,7 @@ WITH CHECK (
     FROM public.workout_session_exercises wse
     JOIN public.workout_sessions ws ON ws.id = wse.workout_session_id
     WHERE wse.id = workout_sets.session_exercise_id
-      AND ws.user_id = auth.uid()
+      AND ws.user_id = (select auth.uid())
   )
 );
 
@@ -571,7 +571,7 @@ USING (
     FROM public.workout_session_exercises wse
     JOIN public.workout_sessions ws ON ws.id = wse.workout_session_id
     WHERE wse.id = workout_sets.session_exercise_id
-      AND ws.user_id = auth.uid()
+      AND ws.user_id = (select auth.uid())
   )
 );
 
@@ -584,7 +584,7 @@ USING (
     SELECT 1
     FROM public.meal_plans mp
     WHERE mp.id = meal_plan_items.meal_plan_id
-      AND mp.user_id = auth.uid()
+      AND mp.user_id = (select auth.uid())
   )
 );
 
@@ -596,7 +596,7 @@ WITH CHECK (
     SELECT 1
     FROM public.meal_plans mp
     WHERE mp.id = meal_plan_items.meal_plan_id
-      AND mp.user_id = auth.uid()
+      AND mp.user_id = (select auth.uid())
   )
 );
 
@@ -608,7 +608,7 @@ USING (
     SELECT 1
     FROM public.meal_plans mp
     WHERE mp.id = meal_plan_items.meal_plan_id
-      AND mp.user_id = auth.uid()
+      AND mp.user_id = (select auth.uid())
   )
 )
 WITH CHECK (
@@ -616,7 +616,7 @@ WITH CHECK (
     SELECT 1
     FROM public.meal_plans mp
     WHERE mp.id = meal_plan_items.meal_plan_id
-      AND mp.user_id = auth.uid()
+      AND mp.user_id = (select auth.uid())
   )
 );
 
@@ -628,7 +628,7 @@ USING (
     SELECT 1
     FROM public.meal_plans mp
     WHERE mp.id = meal_plan_items.meal_plan_id
-      AND mp.user_id = auth.uid()
+      AND mp.user_id = (select auth.uid())
   )
 );
 
@@ -641,7 +641,7 @@ USING (
     SELECT 1
     FROM public.workout_plans wp
     WHERE wp.id = workout_plan_items.workout_plan_id
-      AND wp.user_id = auth.uid()
+      AND wp.user_id = (select auth.uid())
   )
 );
 
@@ -653,7 +653,7 @@ WITH CHECK (
     SELECT 1
     FROM public.workout_plans wp
     WHERE wp.id = workout_plan_items.workout_plan_id
-      AND wp.user_id = auth.uid()
+      AND wp.user_id = (select auth.uid())
   )
 );
 
@@ -665,7 +665,7 @@ USING (
     SELECT 1
     FROM public.workout_plans wp
     WHERE wp.id = workout_plan_items.workout_plan_id
-      AND wp.user_id = auth.uid()
+      AND wp.user_id = (select auth.uid())
   )
 )
 WITH CHECK (
@@ -673,7 +673,7 @@ WITH CHECK (
     SELECT 1
     FROM public.workout_plans wp
     WHERE wp.id = workout_plan_items.workout_plan_id
-      AND wp.user_id = auth.uid()
+      AND wp.user_id = (select auth.uid())
   )
 );
 
@@ -685,7 +685,7 @@ USING (
     SELECT 1
     FROM public.workout_plans wp
     WHERE wp.id = workout_plan_items.workout_plan_id
-      AND wp.user_id = auth.uid()
+      AND wp.user_id = (select auth.uid())
   )
 );
 
@@ -698,13 +698,13 @@ USING (
 CREATE POLICY "foods_select_authenticated"
 ON public.foods
 FOR SELECT
-USING (auth.role() = 'authenticated');
+USING ((select auth.role()) = 'authenticated');
 
 -- exercises
 CREATE POLICY "exercises_select_authenticated"
 ON public.exercises
 FOR SELECT
-USING (auth.role() = 'authenticated');
+USING ((select auth.role()) = 'authenticated');
 
 -- ---------------------------------------------------------
 -- 5. VIEWOVI trebaju poštovati RLS pozivatelja

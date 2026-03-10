@@ -1,2 +1,9 @@
 Get-ExecutionPolicy -List
 Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+
+rad s bazom
+docker ps
+npx supabase start
+npx supabase db reset
+
+http://127.0.0.1:54323
